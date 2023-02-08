@@ -1,11 +1,8 @@
 package com.example.start.service
 
 import com.example.start.datasource.BankDataSource
-import com.example.start.datasource.mock.MockBankDataSource
-import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 internal class BankServiceTest{
@@ -23,7 +20,7 @@ internal class BankServiceTest{
         bankService.getBanks()
 
         //then
-        verify(exactly = 1) { dataSource.retrieveBank() }
+        verify(exactly = 1) { dataSource.retrieveBanks() }
 
 
     }
